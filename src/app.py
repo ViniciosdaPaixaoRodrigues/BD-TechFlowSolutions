@@ -1,6 +1,8 @@
 from flask import Flask, request, redirect, url_for, render_template
 from src.users import usuarios
 
+import re
+
 app = Flask(__name__)
 
 #usuarios = [{"nome": "jorge", "email": "jorge@example.com", "senha": "Senha123"}]
@@ -16,6 +18,24 @@ def cadastrar():
         nome = request.form.get("nome")
         email = request.form.get("email")
         senha = request.form.get("senha")
+        
+        if len(senha) < 8:
+            return render_template(
+                "cadastro.html",
+                erro_senha="A senha deve possuir pelo menos 8 caracteres."
+            ), 400
+
+        if not re.search(r"[A-Z]", senha):
+            return render_template(
+                "cadastro.html",
+                erro_senha="A senha deve possuir pelo menos uma letra maiúscula."
+            ), 400
+
+        if not re.search(r"\d", senha):
+            return render_template(
+                "cadastro.html",
+                erro_senha="A senha deve possuir pelo menos 1 número."
+            ), 400
         
         # Verificar se o email já existe.
         for usuario in usuarios:

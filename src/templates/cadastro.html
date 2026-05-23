@@ -21,7 +21,15 @@
             </div>
             <div class="form-group">
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="senha" placeholder="Crie uma senha" required>
+                <small>
+                    A senha deve possuir pelo menos 8 caracteres,
+                    1 letra maiúscula e 1 número.
+                </small>
+                <input type="password" id="password" name="senha" minlenght="8" placeholder="Crie uma senha" required>
+
+                {% if erro_senha %}
+                    <p class="erro">{{ erro_senha }}</p>
+                {% endif %}
             </div>
             <button type="submit" class="btn-primary">Cadastrar</button>
             <p>Já tem uma conta? <a href="/login">Faça login</a></p>

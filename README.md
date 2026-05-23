@@ -21,6 +21,8 @@ O escopo do projeto é simplístico, com foco em aplicar as metodologias e teste
 
 Para esse projeto, não será usado Banco de Dados, inicialmente guardará os resultados em memória (ou seja, temporários) para efeitos de demonstração.
 
+**Durante a produção do projeto**, foi identificado a necessidade de validação forte de senha por motivos de segurança, ou seja, requisitando que os usuários cadastrem senhas fortes. Requisitos: Mínimo de 8 caracteres, pelo menos 1 numero e 1 letra maiúscula.
+
 <h3>Metodologia Aplicada</h3>
 A metodologia aplicada será a "Metodologia Ágil", com atualizações incrementais e atualizações constantes, diferente de outros métodos como o Cascata.
 
