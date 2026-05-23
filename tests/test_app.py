@@ -91,4 +91,4 @@ def test_loginInvalido():
     
     assert response.status_code == 401
     
-    assert b"Teste" in response.data
+    assert b"Email ou senha inv\xc3\xa1lidos!" in response.data
