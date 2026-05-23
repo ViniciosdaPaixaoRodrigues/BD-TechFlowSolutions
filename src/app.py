@@ -12,15 +12,18 @@ def home():
 def cadastrar():
     if request.method == "POST":
 
-        dados = request.form
+        nome = request.form.get("nome")
+        email = request.form.get("email")
+        senha = request.form.get("senha")
+        
+        # Verificar se o email já existe.
+        for usuario in usuarios:
+            if usuario["email"] == email:
 
-        usuario = {
-            "nome": dados["nome"],
-            "email": dados["email"],
-            "senha": dados["senha"]
-        }
-
-        usuarios.append(usuario)
+                return "Este email já está cadastrado!"
+        
+        novo_usuario = {"nome": nome, "email": email, "senha": senha}
+        usuarios.append(novo_usuario)
 
         return "Usuário cadastrado com sucesso!"
 
@@ -42,9 +45,9 @@ def login():
     
     return render_template("login.html")
 
-@app.route("/usuarios", methods=["GET"])
+@app.route("/usuarios")
 def listar_usuarios():
-    return jsonify(usuarios)
+    return render_template("usuarios.html", lista_usuarios=usuarios)
 
 if __name__ == "__main__":
     app.run(debug=True)
