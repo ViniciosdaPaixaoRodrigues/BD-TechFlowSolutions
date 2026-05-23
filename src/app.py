@@ -22,19 +22,25 @@ def cadastrar():
         if len(senha) < 8:
             return render_template(
                 "cadastro.html",
-                erro_senha="A senha deve possuir pelo menos 8 caracteres."
+                erro_senha="A senha deve possuir pelo menos 8 caracteres.",
+                nome=nome,
+                email=email
             ), 400
 
         if not re.search(r"[A-Z]", senha):
             return render_template(
                 "cadastro.html",
-                erro_senha="A senha deve possuir pelo menos uma letra maiúscula."
+                erro_senha="A senha deve possuir pelo menos uma letra maiúscula.",
+                nome=nome,
+                email=email
             ), 400
 
         if not re.search(r"\d", senha):
             return render_template(
                 "cadastro.html",
-                erro_senha="A senha deve possuir pelo menos 1 número."
+                erro_senha="A senha deve possuir pelo menos 1 número.",
+                nome=nome,
+                email=email
             ), 400
         
         # Verificar se o email já existe.
@@ -64,7 +70,8 @@ def login():
             
         return render_template(
     "login.html",
-    erro="Email ou senha inválidos!"
+    erro="Email ou senha inválidos!",
+    email=email
 ), 401
     
     return render_template("login.html")
