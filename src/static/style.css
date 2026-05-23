@@ -164,6 +164,12 @@ nav {
     background-color: #f9f9f9;
 }
 
+.erro {
+    color: red;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 code {
     background: #eee;
     padding: 2px 5px;

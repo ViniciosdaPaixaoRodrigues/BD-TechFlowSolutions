@@ -42,7 +42,10 @@ def login():
             if usuario["email"] == email and usuario["senha"] == senha:
                 return redirect(url_for("perfil", email=email))
             
-        return "Email ou senha inválidos!"
+        return render_template(
+    "login.html",
+    erro="Email ou senha inválidos!"
+), 401
     
     return render_template("login.html")
 

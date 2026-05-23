@@ -7,13 +7,20 @@ from src.app import app
 from src.users import usuarios
 
 def teste_home():
+    print("\nTeste: Acessar página principal: ", end="")
     client = app.test_client()
     
     response = client.get("/")
     
+    if response.status_code == 200:
+        print("\033[32mSucesso\033[0m")
+    else:
+        print("Fracasso\n")
+    
     assert response.status_code == 200
-
+    
 def teste_cadastro():
+    print("\nTentativa de Cadastro: Usuário 'Teste'.\nResultado: ", end="")
     
     client = app.test_client()
     
@@ -26,6 +33,11 @@ def teste_cadastro():
             }
         )
     
+    if response.status_code == 200:
+        print("\033[32mSucesso\033[0m")
+    else:
+        print("\033[31mFracasso\n\033[0m")
+    
     assert response.status_code == 200
     
     assert b"Usu\xc3\xa1rio cadastrado com sucesso!" in response.data
@@ -36,16 +48,23 @@ def teste_cadastro():
     )
 
 def teste_login():
+    print("\nTentativa de Login: Usuário 'Teste'.")
+    
     client = app.test_client()
     
     response = client.post(
         "/login",
         data = {
             "email": "emailteste@example.com",
-            "senha": "Senha123"
+            "senha": "Senha13"
         },
         follow_redirects=True
     )
+    
+    if response.status_code == 200:
+        print("\033[32mSucesso\033[0m")
+    else:
+        print("\033[31mFracasso\033[0m")
     
     assert response.status_code == 200
     
