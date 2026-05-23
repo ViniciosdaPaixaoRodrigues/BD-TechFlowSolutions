@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.app import app
 from src.users import usuarios
 
-def teste_home():
+def test_home():
     print("\nTeste: Acessar página principal: ", end="")
     client = app.test_client()
     
@@ -15,11 +15,11 @@ def teste_home():
     if response.status_code == 200:
         print("\033[32mSucesso\033[0m")
     else:
-        print("Fracasso\n")
+        print("\033[31mFracasso\033[0m\n")
     
     assert response.status_code == 200
     
-def teste_cadastro():
+def test_cadastro():
     print("\nTentativa de Cadastro: Usuário 'Teste'.\nResultado: ", end="")
     
     client = app.test_client()
@@ -47,8 +47,31 @@ def teste_cadastro():
         for u in usuarios
     )
 
-def teste_login():
+def test_login():
     print("\nTentativa de Login: Usuário 'Teste'.")
+    
+    client = app.test_client()
+    
+    response = client.post(
+        "/login",
+        data = {
+            "email": "emailteste@example.com",
+            "senha": "Senha123"
+        },
+        follow_redirects=True
+    )
+    
+    if response.status_code == 200:
+        print("\033[32mSucesso\033[0m")
+    else:
+        print("\033[31mFracasso\033[0m")
+    
+    assert response.status_code == 200
+    
+    assert b"Teste" in response.data
+    
+def test_loginInvalido():
+    print("\nTentativa de Login INVÁLIDA: Usuário 'Teste'.")
     
     client = app.test_client()
     
@@ -61,11 +84,11 @@ def teste_login():
         follow_redirects=True
     )
     
-    if response.status_code == 200:
+    if response.status_code == 401:
         print("\033[32mSucesso\033[0m")
     else:
         print("\033[31mFracasso\033[0m")
     
-    assert response.status_code == 200
+    assert response.status_code == 401
     
     assert b"Teste" in response.data
