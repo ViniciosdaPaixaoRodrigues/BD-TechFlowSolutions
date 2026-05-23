@@ -17,7 +17,7 @@ Usando Python e MySQL, o usuário poderá realizar Login e Cadastro em um banco 
 3. Tela depois de Login para localizar o usuário.
 
 <h3>Escopo do Projeto</h3>
-O escopo do projeto é simplístico, com foco em aplicar as metodologias e testes de funcionalidade com a maior prioridade. Portanto, não haverá diversas funções / adições. Ou seja, inicialmente só as funções básicas em Flask.
+O escopo do projeto é simplístico, com foco em aplicar as metodologias e testes de funcionalidade com a maior prioridade, portanto não haverá diversas funções / adições. Ou seja, inicialmente só as funções básicas em Flask.
 
 Para esse projeto, não será usado Banco de Dados, inicialmente guardará os resultados em memória (ou seja, temporários) para efeitos de demonstração.
 
