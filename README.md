@@ -19,6 +19,8 @@ Usando Python e MySQL, o usuário poderá realizar Login e Cadastro em um banco 
 <h3>Escopo do Projeto</h3>
 O escopo do projeto é simplístico, com foco em aplicar as metodologias e testes de funcionalidade com a maior prioridade. Portanto, não haverá diversas funções inicialmente porém devem ser aplicadas usando Classes e Funções (ou seja, aplicar Programação Orientada a Objetos) para facilitar a leitura do código e manutenção.
 
+Para esse projeto, não será usado Banco de Dados, inicialmente guardará os resultados em memória (ou seja, temporários) para efeitos de demonstração.
+
 <h3>Metodologia Aplicada</h3>
 A metodologia aplicada será a "Metodologia Ágil", com atualizações incrementais e atualizações constantes, diferente de outros métodos como o Cascata.
 
