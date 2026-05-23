@@ -6,7 +6,6 @@
     <title>Cadastro - MeuSite</title>
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -14,7 +13,7 @@
             <h2>Criar Conta</h2>
             <div class="form-group">
                 <label for="name">Nome Completo</label>
-                <input type="text" id="name" nome="name" placeholder="Seu nome" required>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
             </div>
             <div class="form-group">
                 <label for="email">E-mail</label>
@@ -22,11 +21,11 @@
             </div>
             <div class="form-group">
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Crie uma senha" required>
+                <input type="password" id="password" name="senha" placeholder="Crie uma senha" required>
             </div>
             <button type="submit" class="btn-primary">Cadastrar</button>
-            <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
-            <p><a href="index.html">Voltar para Home</a></p>
+            <p>Já tem uma conta? <a href="/">Faça login</a></p>
+            <p><a href="/">Voltar para Home</a></p>
         </form>
     </div>
 </body>
