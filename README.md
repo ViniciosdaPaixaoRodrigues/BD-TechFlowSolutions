@@ -21,3 +21,5 @@ O escopo do projeto é simplístico, com foco em aplicar as metodologias e teste
 
 <h3>Metodologia Aplicada</h3>
 A metodologia aplicada será a "Metodologia Ágil", com atualizações incrementais e atualizações constantes, diferente de outros métodos como o Cascata.
+
+Para organização de ideias, será usado um quadro Kanban
