@@ -27,7 +27,9 @@ A metodologia aplicada será a "Metodologia Ágil", com atualizações increment
 Para organização de ideias, será usado um quadro Kanban
 
 <h2>Como Rodar.</h2>
-1. Clone o repositório
+No terminal Powershell ou do Visual Studio Code (Recomendado), abra a pasta onde deseja adicionar o repositório, depois siga os passos a seguir:
+
+1. No terminal, clone o repositório com o seguinte comando.
 
 ```bash
 git clone https://github.com/ViniciosdaPaixaoRodrigues/BD-TechFlowSolutions
