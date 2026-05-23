@@ -1,8 +1,9 @@
 from flask import Flask, request, redirect, url_for, render_template
+from src.users import usuarios
 
 app = Flask(__name__)
 
-usuarios = [{"nome": "jorge", "email": "jorge@example.com", "senha": "Senha123"}]
+#usuarios = [{"nome": "jorge", "email": "jorge@example.com", "senha": "Senha123"}]
 
 @app.route("/")
 def home():

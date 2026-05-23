@@ -1,0 +1,1 @@
+usuarios = [{"nome": "jorge", "email": "jorge@example.com", "senha": "Senha123"}]
