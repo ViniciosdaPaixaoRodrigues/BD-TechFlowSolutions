@@ -30,7 +30,7 @@ Para organização de ideias, será usado um quadro Kanban
 1. Clone o repositório
 
 ```bash
-git clone LINK
+git clone https://github.com/ViniciosdaPaixaoRodrigues/BD-TechFlowSolutions
 ```
 
 2. Instale as dependências
