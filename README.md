@@ -17,7 +17,7 @@ Usando Python e MySQL, o usuário poderá realizar Login e Cadastro em um banco 
 3. Tela depois de Login para localizar o usuário.
 
 <h3>Escopo do Projeto</h3>
-O escopo do projeto é simplístico, com foco em aplicar as metodologias e testes de funcionalidade com a maior prioridade. Portanto, não haverá diversas funções inicialmente porém devem ser aplicadas usando Classes e Funções (ou seja, aplicar Programação Orientada a Objetos) para facilitar a leitura do código e manutenção.
+O escopo do projeto é simplístico, com foco em aplicar as metodologias e testes de funcionalidade com a maior prioridade. Portanto, não haverá diversas funções / adições. Ou seja, inicialmente só as funções básicas em Flask.
 
 Para esse projeto, não será usado Banco de Dados, inicialmente guardará os resultados em memória (ou seja, temporários) para efeitos de demonstração.
 
@@ -29,7 +29,7 @@ Para organização de ideias, será usado um quadro Kanban
 <h2>Como Rodar.</h2>
 No terminal Powershell ou do Visual Studio Code (Recomendado), abra a pasta onde deseja adicionar o repositório, depois siga os passos a seguir:
 
-1. No terminal, clone o repositório com o seguinte comando.
+1. No terminal Powershell / Terminal do Visual Studio Code, clone o repositório com o seguinte comando.
 
 ```bash
 git clone https://github.com/ViniciosdaPaixaoRodrigues/BD-TechFlowSolutions
@@ -47,6 +47,6 @@ pip install -r requirements.txt
 python -m src.app
 ```
 
-4. Acesse:
+4. Acesse no navegador pela seguinte URL:
 
 http://127.0.0.1:5000
