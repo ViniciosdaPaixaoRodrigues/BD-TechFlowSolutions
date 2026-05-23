@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - MeuSite</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo">MeuSite</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/usuarios">Lista de Usuários</a>
+            <a href="/login">Sair</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="auth-form">
+            <h2>Editar Perfil</h2>
+            <p>Atualize suas informações abaixo.</p>
+            
+            <form method="POST" action="{{ url_for('editar_perfil', email_original=usuario.email) }}">
+                <div class="form-group">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" value="{{ usuario.nome }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" value="{{ usuario.email }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Nova Senha</label>
+                    <input type="password" id="password" name="password" value="{{ usuario.senha }}" required>
+                </div>
+                <button type="submit" class="btn-primary">Salvar Alterações</button>
+            </form>
+
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+
+            <div class="danger-zone">
+                <h3>Zona de Perigo</h3>
+                <p>Esta ação não pode ser desfeita.</p>
+                <form method="POST" action="{{ url_for('deletar_perfil', email=usuario.email) }}" onsubmit="return confirm('Tem certeza que deseja deletar sua conta?');">
+                    <button type="submit" class="btn-danger">Deletar Minha Conta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
