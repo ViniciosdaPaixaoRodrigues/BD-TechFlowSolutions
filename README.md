@@ -25,3 +25,26 @@ Para esse projeto, não será usado Banco de Dados, inicialmente guardará os re
 A metodologia aplicada será a "Metodologia Ágil", com atualizações incrementais e atualizações constantes, diferente de outros métodos como o Cascata.
 
 Para organização de ideias, será usado um quadro Kanban
+
+<h2>Como Rodar.</h2>
+1. Clone o repositório
+
+```bash
+git clone LINK
+```
+
+2. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Execute o projeto
+
+```bash
+python -m src.app
+```
+
+4. Acesse:
+
+http://127.0.0.1:5000
