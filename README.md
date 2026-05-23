@@ -1,5 +1,12 @@
 # BD-TechFlowSolutions
-O foco deste projeto é ser uma atividade entregável da faculdade, o objetivo é fazer um sistema de Cadastro e Login usando Python
+O foco deste projeto é ser uma atividade entregável da faculdade, o objetivo é fazer um sistema de Cadastro e Login usando Python.
+
+TechFlow Solutions sendo o nome fictício de uma empresa, especializada em Soluções em Software.
+
+Proposta:
+"aplicando os conceitos de Engenharia de Software para planejar, criar, e gerenciar um repositório no GitHub que simule o desenvolvimento do sistema. A atividade envolverá desde a organização do repositório até a implementação de funcionalidades básicas, uso de ferramentas de controle de qualidade e gestão de mudanças.
+
+A TechFlow Solutions, uma empresa fictícia especializada em soluções de software, foi contratada para desenvolver um sistema de gerenciamento de tarefas baseado em metodologias ágeis. O cliente, uma startup de logística, busca um sistema que permita acompanhar o fluxo de trabalho em tempo real, priorizar tarefas críticas e monitorar o desempenho da equipe"
 
 <h2>Objetivo do Projeto</h2>
 
@@ -8,3 +15,9 @@ Usando Python e MySQL, o usuário poderá realizar Login e Cadastro em um banco 
 1. Cadastro e Login como tarefa principal
 2. Deve ser capaz de redefinir a senha
 3. Tela depois de Login para localizar o usuário.
+
+<h3>Escopo do Projeto</h3>
+O escopo do projeto é simplístico, com foco em aplicar as metodologias e testes de funcionalidade com a maior prioridade. Portanto, não haverá diversas funções inicialmente porém devem ser aplicadas usando Classes e Funções (ou seja, aplicar Programação Orientada a Objetos) para facilitar a leitura do código e manutenção.
+
+<h3>Metodologia Aplicada</h3>
+A metodologia aplicada será a "Metodologia Ágil", com atualizações incrementais e atualizações constantes, diferente de outros métodos como o Cascata.
