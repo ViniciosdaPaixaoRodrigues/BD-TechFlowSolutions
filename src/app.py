@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -6,7 +6,7 @@ usuarios = []
 
 @app.route("/")
 def home():
-    return "Sistema de Login e Cadastro funcionando!"
+    return render_template("index.html")
 
 @app.route("/cadastro", methods=["POST"])
 def cadastrar():
