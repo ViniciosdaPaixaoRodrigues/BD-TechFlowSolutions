@@ -1,7 +1,8 @@
 import sys
 import os
 
-#sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+# Necessário essa linha para que o sistema localize o arquivo de testes.
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.app import app
 from src.users import usuarios
