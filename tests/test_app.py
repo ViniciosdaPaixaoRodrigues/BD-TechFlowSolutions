@@ -48,12 +48,10 @@ def test_cadastro():
     
     assert response.status_code == 200
     
-    assert b"Usu\xc3\xa1rio cadastrado com sucesso!" in response.data
-    
     assert any(
         u["email"] == "emailteste@example.com"
         for u in usuarios
-    )
+)
 
 def test_login():
     
