@@ -170,6 +170,19 @@ nav {
     font-weight: bold;
 }
 
+.toast {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.toast.erro {
+    background-color: #ffdddd;
+    color: #a00000;
+    border: 1px solid #ff4444;
+}
+
 code {
     background: #eee;
     padding: 2px 5px;

@@ -1,9 +1,10 @@
-from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template, flash
 from src.users import usuarios
 
 import re
 
 app = Flask(__name__)
+app.secret_key = "chave_secreta"
 
 #usuarios = [{"nome": "jorge", "email": "jorge@example.com", "senha": "Senha123"}]
 
@@ -46,13 +47,17 @@ def cadastrar():
         # Verificar se o email já existe.
         for usuario in usuarios:
             if usuario["email"] == email:
-
-                return "Este email já está cadastrado!"
+                flash("Já existe uma conta vinculada a este email.", "erro")
+                
+                return render_template(
+        "cadastro.html",
+        nome=nome
+    )
         
         novo_usuario = {"nome": nome, "email": email, "senha": senha}
         usuarios.append(novo_usuario)
 
-        return "Usuário cadastrado com sucesso!"
+        return render_template("login.html", email= email)
 
     return render_template("cadastro.html")
 
@@ -87,7 +92,8 @@ def perfil(email):
 
     if usuario_encontrado:
         return render_template('perfil.html', usuario=usuario_encontrado)
-    return "Usuário não encontrado", 404
+    
+    return render_template("404_usuario.html"), 404
 
 @app.route('/editar_perfil/<email_original>', methods=['POST'])
 def editar_perfil(email_original):
