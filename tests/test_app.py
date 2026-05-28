@@ -8,6 +8,9 @@ from src.app import app
 from src.users import usuarios
 
 def test_home():
+    # Necessário para garantir que os testes não deem falso-positivo.
+    usuarios.clear()
+
     print("\nTeste: Acessar página principal: ", end="")
     client = app.test_client()
     
@@ -21,6 +24,9 @@ def test_home():
     assert response.status_code == 200
     
 def test_cadastro():
+    # Necessário para garantir que os testes não deem falso-positivo.
+    usuarios.clear()
+    
     print("\nTentativa de Cadastro: Usuário 'Teste'.\nResultado: ", end="")
     
     client = app.test_client()
@@ -49,6 +55,9 @@ def test_cadastro():
     )
 
 def test_login():
+    # Necessário para garantir que os testes não deem falso-positivo.
+    usuarios.clear()
+    
     print("\nTentativa de Login: Usuário 'Teste'.")
     
     client = app.test_client()
@@ -72,6 +81,9 @@ def test_login():
     assert b"Teste" in response.data
     
 def test_loginInvalido():
+    # Necessário para garantir que os testes não deem falso-positivo.
+    usuarios.clear()
+    
     print("\nTentativa de Login INVÁLIDA: Usuário 'Teste'.")
     
     client = app.test_client()
