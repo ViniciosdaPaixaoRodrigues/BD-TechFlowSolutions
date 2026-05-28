@@ -37,7 +37,7 @@ def test_cadastro():
             "nome": "Teste",
             "email": "emailteste@example.com",
             "senha": "Senha123"
-            }
+            },
             follow_redirects=True
         )
     
