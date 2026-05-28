@@ -38,6 +38,7 @@ def test_cadastro():
             "email": "emailteste@example.com",
             "senha": "Senha123"
             }
+            follow_redirects=True
         )
     
     if response.status_code == 200:
