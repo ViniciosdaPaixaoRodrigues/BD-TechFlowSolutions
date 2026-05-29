@@ -50,9 +50,9 @@ def cadastrar():
                 flash("Já existe uma conta vinculada a este email.", "erro")
                 
                 return render_template(
-        "cadastro.html",
-        nome=nome
-    )
+                    "cadastro.html",
+                    nome=nome
+                )
         
         novo_usuario = {"nome": nome, "email": email, "senha": senha}
         usuarios.append(novo_usuario)

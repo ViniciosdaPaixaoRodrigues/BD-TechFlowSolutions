@@ -23,15 +23,15 @@
             <form method="POST" action="{{ url_for('editar_perfil', email_original=usuario.email) }}">
                 <div class="form-group">
                     <label for="name">Nome Completo</label>
-                    <input type="text" id="name" name="name" value="{{ usuario.nome }}" required>
+                    <input type="text" id="name" name="name" value="{{ usuario.nome }}">
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" value="{{ usuario.email }}" required>
+                    <input type="email" id="email" name="email" value="{{ usuario.email }}">
                 </div>
                 <div class="form-group">
                     <label for="senha">Nova Senha</label>
-                    <input type="senha" id="senha" name="senha" placeholder="Sua Senha" required>
+                    <input type="senha" id="senha" name="senha" placeholder="Sua Senha">
                 </div>
                 <button type="submit" class="btn-primary">Salvar Alterações</button>
             </form>
