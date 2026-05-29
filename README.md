@@ -66,3 +66,7 @@ python -m src.app
 4. Acesse no navegador pela seguinte URL:
 
 http://127.0.0.1:5000
+
+## Demonstração em Vídeo
+
+https://youtu.be/ROho9B7vvUk
