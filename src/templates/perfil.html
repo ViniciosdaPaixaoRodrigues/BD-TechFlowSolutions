@@ -32,6 +32,15 @@
                 <div class="form-group">
                     <label for="senha">Nova Senha</label>
                     <input type="senha" id="senha" name="senha" placeholder="Sua Senha">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for categoria, mensagem in messages %}
+                        <div class="toast {{ categoria }}">
+                            {{ mensagem }}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
                 </div>
                 <button type="submit" class="btn-primary">Salvar Alterações</button>
             </form>

@@ -99,15 +99,47 @@ def perfil(email):
 def editar_perfil(email_original):
     # Pega os novos dados do formulário
     novo_nome = request.form.get('name')
+    email = request.form.get('email')
     novo_email = request.form.get('email')
-    nova_senha = request.form.get('password')
+    nova_senha = request.form.get('senha', '')
+    
+    if len(nova_senha) < 8:
+        flash("A senha deve possuir pelo menos 8 caracteres.", "erro")
+            
+        return render_template("perfil.html", usuario={
+            "nome": novo_nome,
+            "email": email,
+            "senha": nova_senha
+        }
+    )
+
+    if not re.search(r"[A-Z]", nova_senha):
+        flash("A senha deve conter pelo menos 1 letra maiúscula.", "erro")
+        
+        return render_template("perfil.html", usuario={
+            "nome": novo_nome,
+            "email": email,
+            "senha": nova_senha
+        }
+    )
+
+    if not re.search(r"\d", nova_senha):
+        flash("A senha deve conter pelo menos 1 número.", "erro")
+        
+        return render_template("perfil.html", usuario={
+            "nome": novo_nome,
+            "email": email,
+            "senha": nova_senha
+        }
+    )
 
     # Busca o usuário e atualiza seus dados
     for usuario in usuarios:
         if usuario['email'] == email_original:
             usuario['nome'] = novo_nome
             usuario['email'] = novo_email
-            usuario['senha'] = nova_senha
+            if nova_senha.strip():
+                usuario["senha"] = nova_senha
             # Após editar, vai para a lista de usuários para ver a mudança
             return redirect(url_for('listar_usuarios'))
             
