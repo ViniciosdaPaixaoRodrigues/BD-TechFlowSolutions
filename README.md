@@ -1,4 +1,4 @@
-# BD-TechFlowSolutions
+# Desafio-TechFlowSolutions
 O foco deste projeto é ser uma atividade entregável da faculdade, o objetivo é fazer um sistema de Cadastro e Login usando Python.
 
 TechFlow Solutions sendo o nome fictício de uma empresa, especializada em Soluções em Software.
